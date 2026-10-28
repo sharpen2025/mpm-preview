@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="robots" content="noindex,nofollow">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MPM KOREA | 시안 A - Corporate Headquarters</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
+<style>
+:root{--navy:#0A1B33;--navy2:#10284a;--blue:#1F5FBF;--red:#D7262E;--ink:#111827;--gray:#5b6577;--line:#e3e7ee;--bg:#f5f7fa}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:"Pretendard Variable",Pretendard,-apple-system,sans-serif;color:var(--ink);background:#fff;word-break:keep-all;-webkit-font-smoothing:antialiased}
+a{color:inherit;text-decoration:none}
+img{display:block;max-width:100%}
+.wrap{max-width:1320px;margin:0 auto;padding:0 40px}
+
+/* header */
+.hd{position:fixed;inset:0 0 auto 0;z-index:50;transition:.35s}
+.hd .wrap{display:flex;align-items:center;height:92px;max-width:none;padding:0 56px}
+.hd .logo img{height:54px}
+.hd nav{margin-left:auto;display:flex;gap:44px;font-size:16px;font-weight:600;color:#fff}
+.hd nav a{opacity:.9;position:relative;padding:8px 0}
+.hd nav a:after{content:"";position:absolute;left:0;bottom:0;width:0;height:2px;background:var(--red);transition:.3s}
+.hd nav a:hover:after{width:100%}
+.hd .cta{margin-left:48px;display:flex;align-items:center;gap:18px}
+.hd .tel{color:#fff;font-weight:700;font-size:15px;letter-spacing:.02em;opacity:.9}
+.hd .btn{background:var(--red);color:#fff;font-weight:700;font-size:15px;padding:13px 22px;border-radius:2px}
+.hd.on{background:rgba(10,27,51,.96);backdrop-filter:blur(8px)}
+.hd.on .wrap{height:76px}
+.hd.on .logo img{height:44px}
+
+/* hero */
+.hero{position:relative;height:100vh;min-height:720px;overflow:hidden;background:#06101f url('assets/poster.jpg') center/cover;color:#fff}
+.hero .vid{position:absolute;inset:0;pointer-events:none}
+.hero .vid iframe{position:absolute;top:50%;left:50%;width:100vw;height:56.25vw;min-height:100vh;min-width:177.78vh;transform:translate(-50%,-50%);border:0}
+.hero .shade{position:absolute;inset:0;background:linear-gradient(90deg,rgba(6,16,31,.88) 0%,rgba(6,16,31,.55) 45%,rgba(6,16,31,.15) 100%),linear-gradient(0deg,rgba(6,16,31,.85) 0%,rgba(6,16,31,0) 40%)}
+.hero .in{position:relative;height:100%;display:flex;flex-direction:column;justify-content:center;padding:0 56px;max-width:1500px}
+.eyebrow{display:inline-flex;align-items:center;gap:12px;font-size:14px;font-weight:700;letter-spacing:.24em;color:#cfd8e6}
+.eyebrow:before{content:"";width:40px;height:2px;background:var(--red)}
+.hero h1{margin-top:28px;font-size:clamp(34px,4.6vw,72px);font-weight:800;line-height:1.22;letter-spacing:-.035em}
+.hero h1 em{font-style:normal;display:block}
+.hero h1 strong{font-weight:800;color:#fff;background:linear-gradient(transparent 70%,rgba(215,38,46,.85) 70%);padding:0 .08em}
+.hero p.lead{margin-top:28px;font-size:19px;line-height:1.7;color:#d6deea;max-width:700px}
+.hero .acts{margin-top:44px;display:flex;gap:12px}
+.b1{display:inline-flex;align-items:center;gap:10px;background:#fff;color:var(--navy);font-weight:700;padding:18px 30px;font-size:16px;border-radius:2px}
+.b2{display:inline-flex;align-items:center;gap:10px;border:1px solid rgba(255,255,255,.5);color:#fff;font-weight:600;padding:18px 30px;font-size:16px;border-radius:2px}
+.hero .bar{position:absolute;left:0;right:0;bottom:0;display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid rgba(255,255,255,.18)}
+.hero .bar div{padding:30px 56px;border-right:1px solid rgba(255,255,255,.18);display:flex;align-items:baseline;gap:18px}
+.hero .bar div:last-child{border-right:0}
+.hero .bar b{font-size:13px;color:var(--red);letter-spacing:.12em}
+.hero .bar span{font-size:20px;font-weight:700}
+.hero .bar small{font-size:13px;color:#9fb0c8;letter-spacing:.1em;margin-left:auto}
+
+/* trust strip */
+.trust{background:var(--navy);color:#fff}
+.trust .wrap{display:grid;grid-template-columns:repeat(4,1fr)}
+.trust .it{padding:56px 32px;border-left:1px solid rgba(255,255,255,.1)}
+.trust .it:last-child{border-right:1px solid rgba(255,255,255,.1)}
+.trust .k{font-size:14px;color:#9fb0c8;font-weight:600}
+.trust .v{margin-top:12px;font-size:46px;font-weight:800;letter-spacing:-.03em}
+.trust .v sup{font-size:22px;color:var(--red);margin-left:2px}
+.trust .d{margin-top:8px;font-size:14px;color:#c4cfde}
+
+/* section */
+section{padding:140px 0}
+.sh{display:flex;justify-content:space-between;align-items:flex-end;gap:40px;margin-bottom:64px}
+.sh .tag{font-size:14px;font-weight:800;letter-spacing:.2em;color:var(--blue)}
+.sh h2{margin-top:16px;font-size:clamp(30px,3vw,46px);font-weight:800;line-height:1.3;letter-spacing:-.03em}
+.sh p{font-size:17px;line-height:1.75;color:var(--gray);max-width:460px}
+
+/* one-stop */
+.flow{display:grid;grid-template-columns:repeat(4,1fr);gap:0;border-top:2px solid var(--navy)}
+.flow .st{padding:36px 30px 40px;border-right:1px solid var(--line);position:relative}
+.flow .st:last-child{border-right:0}
+.flow .no{font-size:15px;font-weight:800;color:var(--red)}
+.flow h3{margin-top:18px;font-size:24px;font-weight:800}
+.flow h3 small{display:block;font-size:13px;color:#8a94a6;font-weight:600;letter-spacing:.12em;margin-top:6px}
+.flow p{margin-top:18px;font-size:15.5px;line-height:1.75;color:var(--gray)}
+.flow .hq{position:absolute;top:-14px;left:30px;background:var(--navy);color:#fff;font-size:12px;font-weight:700;padding:5px 10px;letter-spacing:.06em}
+.feat{margin-top:90px;display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.feat .c{position:relative;height:440px;overflow:hidden;color:#fff}
+.feat .c img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform .8s}
+.feat .c:hover img{transform:scale(1.05)}
+.feat .c.prodimg{background:radial-gradient(circle at 50% 30%,#f5f7fa 0%,#d3dae4 70%)}
+.feat .c.prodimg img{object-fit:contain;padding:28px 26px 170px}
+.feat .c:after{content:"";position:absolute;inset:0;background:linear-gradient(0deg,rgba(6,16,31,.92),rgba(6,16,31,.1) 60%)}
+.feat .c .t{position:absolute;left:32px;right:32px;bottom:32px;z-index:1}
+.feat .c b{font-size:13px;letter-spacing:.16em;color:#ff6b70}
+.feat .c h4{margin-top:10px;font-size:24px;font-weight:800;line-height:1.35}
+.feat .c p{margin-top:10px;font-size:15px;line-height:1.65;color:#d4dbe6}
+
+/* products */
+.prod{background:var(--bg)}
+.tabs{display:flex;gap:4px;margin-bottom:36px;border-bottom:1px solid var(--line)}
+.tabs button{all:unset;cursor:pointer;padding:16px 26px;font-size:16px;font-weight:700;color:#8a94a6;border-bottom:3px solid transparent;margin-bottom:-1px}
+.tabs button.on{color:var(--navy);border-color:var(--navy)}
+.pgrid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
+.pc{background:#fff;border:1px solid var(--line);transition:.3s}
+.pc:hover{border-color:var(--navy);box-shadow:0 20px 40px -20px rgba(10,27,51,.35)}
+.pimg{position:relative;aspect-ratio:576/556;overflow:hidden;background:#fff}
+.pimg img{position:absolute;width:111.1%;max-width:none;left:-5.56%;top:-8.27%}
+.pc .meta{padding:22px 24px 26px;border-top:1px solid var(--line)}
+.pc .cat{font-size:13px;font-weight:700;color:var(--blue)}
+.pc h5{margin-top:6px;font-size:21px;font-weight:800;letter-spacing:-.01em}
+.pc .more{margin-top:14px;font-size:14px;color:var(--gray);display:flex;justify-content:space-between}
+.mat{display:none;grid-template-columns:1.1fr 1fr;gap:0;background:#fff;border:1px solid var(--line)}
+.mat img{width:100%;height:100%;object-fit:cover;min-height:420px}
+.mat .t{padding:56px}
+.mat h5{font-size:28px;font-weight:800}
+.mat ul{margin-top:24px;list-style:none}
+.mat li{padding:16px 0;border-bottom:1px solid var(--line);font-size:16px;color:#333;display:flex;gap:12px}
+.mat li:before{content:"";flex:0 0 6px;height:6px;margin-top:8px;background:var(--red)}
+
+/* message */
+.msg{position:relative;background:var(--navy);color:#fff;overflow:hidden}
+.msg:before{content:"MPM";position:absolute;right:-40px;bottom:-90px;font-size:360px;font-weight:900;color:rgba(255,255,255,.035);letter-spacing:-.04em}
+.msg .wrap{display:grid;grid-template-columns:1fr 1.2fr;gap:100px;align-items:center;position:relative}
+.msg img{width:100%;height:560px;object-fit:cover}
+.msg q{display:block;font-size:clamp(28px,2.6vw,40px);font-weight:800;line-height:1.4;letter-spacing:-.03em;quotes:none}
+.msg .txt{margin-top:30px;font-size:17px;line-height:1.9;color:#c4cfde}
+.msg .sign{margin-top:40px;display:flex;align-items:center;gap:16px;font-size:15px;color:#9fb0c8}
+.msg .sign b{font-size:22px;color:#fff;letter-spacing:.1em}
+.vision{margin-top:60px;display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid rgba(255,255,255,.15)}
+.vision div{padding:26px 22px 0 0}
+.vision b{font-size:13px;color:var(--red)}
+.vision h6{margin-top:8px;font-size:17px;font-weight:700}
+
+/* hq location */
+.loc .wrap{display:grid;grid-template-columns:1fr 1.3fr;gap:80px}
+.info dl{margin-top:36px;border-top:2px solid var(--navy)}
+.info dl div{display:grid;grid-template-columns:120px 1fr;padding:20px 0;border-bottom:1px solid var(--line);font-size:16px}
+.info dt{font-weight:700;color:var(--navy)}
+.info dd{color:#333}
+.map{position:relative;min-height:460px;background:#e9edf3;overflow:hidden}
+.map iframe{position:absolute;inset:0;width:100%;height:100%;border:0;filter:grayscale(.6) contrast(1.05)}
+
+/* cta */
+.cta-band{background:linear-gradient(100deg,#0A1B33 0%,#123a73 100%);color:#fff;padding:90px 0}
+.cta-band .wrap{display:flex;justify-content:space-between;align-items:center;gap:40px}
+.cta-band h3{font-size:36px;font-weight:800;line-height:1.35;letter-spacing:-.03em}
+.cta-band .ph{font-size:15px;color:#b7c4d8}
+.cta-band .ph b{display:block;font-size:44px;color:#fff;font-weight:800;letter-spacing:.02em;margin-top:6px}
+
+footer{background:#07111f;color:#8392a8;font-size:14px;line-height:1.9;padding:60px 0}
+footer .wrap{display:flex;justify-content:space-between;gap:40px}
+footer img{height:46px;margin-bottom:20px}
+footer b{color:#c4cfde;font-weight:600}
+
+.rv{opacity:0;transform:translateY(40px);transition:1s cubic-bezier(.2,.7,.2,1)}
+.rv.in{opacity:1;transform:none}
+.hero .in>*{animation:up 1.2s cubic-bezier(.2,.7,.2,1) both}
+.hero .in>*:nth-child(2){animation-delay:.15s}.hero .in>*:nth-child(3){animation-delay:.3s}.hero .in>*:nth-child(4){animation-delay:.45s}
+@keyframes up{from{opacity:0;transform:translateY(30px)}to{opacity:1;transform:none}}
+
+
+/* ===== v2 보강 ===== */
+.tech{background:#fff}
+.tgrid{display:grid;grid-template-columns:1fr 1fr;gap:24px}
+.tp{border:1px solid var(--line);display:grid;grid-template-columns:1fr 1.1fr}
+.tp img{width:100%;height:100%;object-fit:cover;min-height:420px}
+.tp .t{padding:40px 36px}
+.tp .ab{font-size:13px;font-weight:800;letter-spacing:.16em;color:var(--red)}
+.tp h3{margin-top:10px;font-size:26px;font-weight:800;line-height:1.35}
+.tp h3 small{display:block;font-size:14px;color:#8a94a6;font-weight:600;margin-top:4px}
+.tp ul{margin-top:20px;list-style:none}
+.tp li{font-size:14.5px;line-height:1.6;color:#444;padding:9px 0;border-bottom:1px solid var(--line)}
+.tp li b{color:var(--navy)}
+.strip{margin-top:24px;height:120px;background:url('assets/meat_strip.jpg') center/cover}
+.pgrid .pc .ph{aspect-ratio:1/1;background:#F1F1F1;display:flex;align-items:center;justify-content:center;padding:22px;overflow:hidden}
+.pgrid .pc .ph img{max-width:100%;max-height:100%;object-fit:contain;transition:transform .5s}
+.pgrid .pc:hover .ph img{transform:scale(1.04)}
+.spec{margin-top:14px;border-top:1px solid var(--line);padding-top:8px}
+.spec div{display:flex;justify-content:space-between;gap:10px;font-size:13px;padding:5px 0;color:#7a8496}
+.spec div b{color:var(--ink);font-weight:600;text-align:right}
+.pgrid.wide{grid-template-columns:1fr 1fr}
+.pgrid.wide .pc .ph{aspect-ratio:16/10}
+.pane{display:none;grid-template-columns:1fr 1fr 1fr;gap:20px}
+.pane .card{background:#fff;border:1px solid var(--line)}
+.pane .card img{width:100%;height:240px;object-fit:cover}
+.pane .card .t{padding:24px}
+.pane .card h5{font-size:20px;font-weight:800}
+.pane .card p{margin-top:8px;font-size:14.5px;line-height:1.7;color:var(--gray)}
+.pane .card ul{margin-top:12px;list-style:none;font-size:14px;color:#444;line-height:1.9}
+.pane .card li:before{content:"· ";color:var(--red);font-weight:800}
+.note{margin-top:20px;font-size:13px;color:#8a94a6}
+.hist{background:var(--bg)}
+.hist .mile{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-bottom:56px}
+.hist .mile div{background:var(--navy);color:#fff;padding:26px}
+.hist .mile b{display:block;font-size:30px;font-weight:800}
+.hist .mile span{font-size:14px;color:#b7c4d8}
+.hcols{display:grid;grid-template-columns:1fr 1fr;gap:0 64px}
+.hcol{border-left:3px solid var(--navy)}
+.hit{display:flex;gap:28px;padding:0 0 40px}
+.hit .y{flex:0 0 auto;background:var(--navy);color:#fff;font-weight:800;font-size:26px;padding:10px 22px 10px 26px;border-radius:0 30px 30px 0;height:fit-content}
+.hit ul{list-style:none;padding-top:6px}
+.hit li{font-size:16px;line-height:1.6;color:#333;margin-bottom:4px}
+.hit li.k{color:var(--red);font-weight:700}
+@media(max-width:1024px){.tgrid,.tp,.hcols,.pane,.pgrid.wide{grid-template-columns:1fr}.hist .mile{grid-template-columns:1fr 1fr}.tp img{min-height:260px}}
+
+.badge{position:fixed;right:20px;bottom:20px;z-index:99;background:#111;color:#fff;font-size:12px;padding:8px 12px;border-radius:20px;opacity:.85}
+
+@media(max-width:1024px){
+ .hd nav,.hd .tel{display:none}.hd .wrap,.hero .in{padding:0 24px}.wrap{padding:0 24px}
+ .hero .bar{grid-template-columns:1fr}.hero .bar div{padding:14px 24px;border-right:0;border-top:1px solid rgba(255,255,255,.12)}
+ .hero .in{justify-content:flex-start;padding-top:180px}
+ .trust .wrap,.flow,.feat,.pgrid{grid-template-columns:1fr 1fr}
+ .msg .wrap,.loc .wrap,.mat{grid-template-columns:1fr}.msg img{height:320px}
+ .sh,.cta-band .wrap,footer .wrap{flex-direction:column;align-items:flex-start}
+ section{padding:90px 0}
+}
+@media(max-width:600px){.trust .wrap,.flow,.feat,.pgrid{grid-template-columns:1fr}.hero .acts{flex-direction:column}.hero p.lead{font-size:16px}}
+</style>
+</head>
+<body>
+<div class="badge">시안 A · Corporate Headquarters</div>
+
+<header class="hd" id="hd">
+  <div class="wrap">
+    <a class="logo" href="#"><img src="https://cdn.imweb.me/thumbnail/20261022/5d1f7d856ef43.png" alt="MPM Magic Packing Machine"></a>
+    <nav><a href="#history">회사소개</a><a href="#onestop">사업분야</a><a href="#products">제품소개</a><a href="#tech">포장기술</a><a href="#hq">고객지원</a></nav>
+    <div class="cta"><span class="tel">1522-0072</span><a class="btn" href="#contact">견적 / 시연 문의</a></div>
+  </div>
+</header>
+
+<section class="hero" style="padding:0">
+  <div class="vid"><iframe src="https://player.vimeo.com/video/1238257999?background=1&autoplay=1&loop=1&muted=1&autopause=0" allow="autoplay; fullscreen; picture-in-picture" title="MPM hero video"></iframe></div>
+  <div class="shade"></div>
+  <div class="in">
+    <span class="eyebrow">MPM KOREA HEADQUARTERS</span>
+    <h1><em>식품포장기계의 설계부터</em><em>제작, 유지보수까지</em><em><strong>MPM본사가</strong> 직접합니다</em></h1>
+    <p class="lead">천안 본사에서 설계하고, 본사에서 만들고, 본사 기술진이 끝까지 책임집니다. 스킨포장기·산소포장기부터 전용 용기와 필름까지, 식품 포장의 TOTAL SOLUTION.</p>
+    <div class="acts"><a class="b1" href="#contact">견적 / 시연 문의 →</a><a class="b2" href="#products">제품 라인업 보기</a></div>
+  </div>
+  <div class="bar">
+    <div><b>01</b><span>설계</span><small>DESIGN</small></div>
+    <div><b>02</b><span>제작</span><small>MANUFACTURING</small></div>
+    <div><b>03</b><span>유지보수</span><small>MAINTENANCE</small></div>
+  </div>
+</section>
+
+<div class="trust" id="about">
+  <div class="wrap">
+    <div class="it rv"><div class="k">설립</div><div class="v" data-n="2018">2018</div><div class="d">식품포장기계 전문 기업</div></div>
+    <div class="it rv"><div class="k">누적 고객사</div><div class="v"><span data-n="5000">5,000</span><sup>+</sup></div><div class="d">정육·수산·반찬·HMR 현장</div></div>
+    <div class="it rv"><div class="k">고객만족도</div><div class="v"><span data-n="99">99</span><sup>%</sup></div><div class="d">본사 직영 사후관리</div></div>
+    <div class="it rv"><div class="k">본사 소재지</div><div class="v" style="font-size:38px">천안</div><div class="d">충남 천안시 동남구 풍세면</div></div>
+  </div>
+</div>
+
+<section id="onestop">
+  <div class="wrap">
+    <div class="sh rv">
+      <div><div class="tag">ONE-STOP BY HEADQUARTERS</div><h2>한 회사가 처음부터 끝까지.<br>책임이 나뉘지 않습니다.</h2></div>
+      <p>설계, 제작, 설치, 유지보수를 모두 MPM 본사가 맡습니다. 문의 창구도, 기술 이력도, 책임도 하나입니다.</p>
+    </div>
+    <div class="flow rv">
+      <div class="st"><span class="hq">본사 직접</span><div class="no">01</div><h3>맞춤 설계<small>DESIGN</small></h3><p>제품 특성, 생산량, 현장 동선을 분석해 최적의 포장 방식과 사양을 설계합니다.</p></div>
+      <div class="st"><span class="hq">본사 직접</span><div class="no">02</div><h3>정밀 제작<small>MANUFACTURING</small></h3><p>위생 기준을 충족하는 소재와 설계로, 정육 스킨 포장부터 산소 포장까지 대응합니다.</p></div>
+      <div class="st"><span class="hq">본사 직접</span><div class="no">03</div><h3>설치·교육<small>INSTALLATION</small></h3><p>현장 설치와 시운전, 작업자 교육까지 마쳐야 납품이 끝난 것으로 봅니다.</p></div>
+      <div class="st"><span class="hq">본사 직접</span><div class="no">04</div><h3>유지보수<small>MAINTENANCE</small></h3><p>정기 점검, 부품 교체, 원격 지원. 본사 기술진이 장비 이력을 기억하고 관리합니다.</p></div>
+    </div>
+    <div class="feat">
+      <div class="c rv"><img src="assets/sp_design.jpg" alt="설계 작업 화면"><div class="t"><b>SPECIAL 01</b><h4>정밀한 설계,<br>완성도 높은 품질</h4><p>외형부터 UI/UX까지, 현장 작업자의 직관성을 고려한 설계</p></div></div>
+      <div class="c rv prodimg"><img src="assets/p_skm.webp" alt="SKM-03VST 자동 연속식 스킨 포장기"><div class="t"><b>SPECIAL 02</b><h4>기술로 앞서가는<br>식품 포장 자동화</h4><p>스킨·산소 포장 라인, 다품종 소량 생산까지 유연하게</p></div></div>
+      <div class="c rv"><img src="assets/sp_assembly.jpg" alt="장비 조립·정비"><div class="t"><b>SPECIAL 03</b><h4>신뢰를 지키는<br>유지 관리 시스템</h4><p>본사 기술진의 정기 점검과 원격 지원</p></div></div>
+    </div>
+  </div>
+</section>
+
+<section class="tech" id="tech">
+  <div class="wrap">
+    <div class="sh rv">
+      <div><div class="tag">PACKAGING TECHNOLOGY</div><h2>진공 스킨 포장과 산소 포장,<br>두 가지 기술을 모두 만듭니다</h2></div>
+      <p>MODIFIED ATMOSPHERE &amp; VACUUM SKIN PACKING. 제품과 유통 방식에 맞는 포장 방식을 본사 엔지니어가 함께 고릅니다.</p>
+    </div>
+    <div class="tgrid">
+      <div class="tp rv"><img src="assets/skin_meat.jpg" alt="진공 스킨 포장"><div class="t"><div class="ab">VSP</div><h3>진공 스킨 포장<small>Vacuum Skin Packaging</small></h3><ul><li><b>유통기한 연장</b> · EVOH 필름을 진공 밀착해 유통기한을 비약적으로 연장</li><li><b>Loss 감소</b> · 유통기한 연장으로 고기 Loss 대폭 감소</li><li><b>고산소 차단·신선도</b> · 산소 유입을 최소화해 신선도 유지</li><li><b>시각적 효과</b> · 필름이 제품 형상에 밀착되어 입체적인 진열 효과</li><li><b>제품 보호</b> · 오염과 외부 충격에 강해 택배 등 물류에 적합</li></ul></div></div>
+      <div class="tp rv"><img src="assets/map_meat.jpg" alt="산소 포장"><div class="t"><div class="ab">MAP</div><h3>가스 치환(산소) 포장<small>Modified Atmosphere Packaging</small></h3><ul><li><b>신선도</b> · 산소는 육류의 색을 붉게, 이산화탄소는 미생물 번식을 억제</li><li><b>시각적 효과</b> · 압착되지 않아 육류·샐러드 등 형태 유지</li><li><b>가스 혼합 비율</b> · 산소 80%+이산화탄소 20% 또는 산소 70%+이산화탄소 30%</li><li><b>유통기한 연장</b> · 일반 랩포장 대비 유통기한이 늘어남</li></ul></div></div>
+    </div>
+    <div class="strip rv"></div>
+  </div>
+</section>
+
+<section class="prod" id="products">
+  <div class="wrap">
+    <div class="sh rv">
+      <div><div class="tag">PRODUCT LINE-UP</div><h2>MPM-PACK 제품 라인업</h2></div>
+      <p>수동형부터 자동 연속식, 산소 포장기, 전용 용기·필름과 선물 포장까지. 생산 규모에 맞는 구성을 본사에서 직접 제안합니다.</p>
+    </div>
+    <div class="tabs rv"><button class="on" data-t="skin">스킨포장기</button><button data-t="cont">자동 연속식</button><button data-t="map">산소포장기</button><button data-t="mat">용기·필름</button><button data-t="gift">선물 포장</button></div>
+    <div class="pgrid" data-p="skin"><a class="pc" href="https://mpmkorea.imweb.me/38"><div class="ph"><img src="assets/p_msk500.webp" alt="MSK-280VST" loading="lazy"></div><div class="meta"><div class="cat">수동 스킨 포장기 · 1구</div><h5>MSK-280VST</h5><div class="spec"><div>포장 속도<b>3~4팩/분</b></div><div>전원<b>단상 220V · 1kW</b></div><div>크기(W×D×H)<b>600×450×400mm</b></div><div>필름 규격<b>100Mic × 250mm × 200M</b></div></div></div></a><a class="pc" href="https://mpmkorea.imweb.me/39"><div class="ph"><img src="assets/p_msk280.webp" alt="MSK-500VST" loading="lazy"></div><div class="meta"><div class="cat">수동 스킨 포장기 · 2구</div><h5>MSK-500VST</h5><div class="spec"><div>포장 속도<b>6~8팩/분</b></div><div>전원<b>단상 220V · 3kW</b></div><div>크기(W×D×H)<b>760×550×570mm</b></div><div>필름 규격<b>100Mic × 340mm × 200M</b></div></div></div></a><a class="pc" href="https://mpmkorea.imweb.me/40"><div class="ph"><img src="assets/p_compact.webp" alt="SMT-COMPACT" loading="lazy"></div><div class="meta"><div class="cat">반자동 스킨 포장기 · 1구</div><h5>SMT-COMPACT</h5><div class="spec"><div>포장 속도<b>4~5팩/분</b></div><div>전원<b>단상 220V · 2kW</b></div><div>크기(W×D×H)<b>460×550×1,570mm</b></div><div>필름 규격<b>100Mic × 250mm × 300M</b></div></div></div></a><a class="pc" href="https://mpmkorea.imweb.me/41"><div class="ph"><img src="assets/p_smt200.webp" alt="SMT-200VST" loading="lazy"></div><div class="meta"><div class="cat">반자동 스킨 포장기 · 2구</div><h5>SMT-200VST</h5><div class="spec"><div>포장 속도<b>8~10팩/분</b></div><div>전원<b>삼상 380V+N · 3kW</b></div><div>크기(W×D×H)<b>1,020×920×1,400mm</b></div><div>필름 규격<b>100Mic × 317mm × 300M</b></div></div></div></a><a class="pc" href="https://mpmkorea.imweb.me/42"><div class="ph"><img src="assets/p_smt300.jpg" alt="SMT-300VST" loading="lazy"></div><div class="meta"><div class="cat">반자동 스킨 포장기 · D3</div><h5>SMT-300VST</h5><div class="spec"><div>포장 속도<b>5~6팩/분</b></div><div>전원<b>삼상 380V+N · 3kW</b></div><div>크기(W×D×H)<b>1,030×920×1,535mm</b></div><div>필름 규격<b>100Mic × 350mm × 300M</b></div></div></div></a><a class="pc" href="https://mpmkorea.imweb.me/43"><div class="ph"><img src="assets/p_smt400.webp" alt="SMT-400VST" loading="lazy"></div><div class="meta"><div class="cat">반자동 스킨 포장기 · 4구</div><h5>SMT-400VST</h5><div class="spec"><div>포장 속도<b>12~16팩/분</b></div><div>전원<b>삼상 380V+N · 7kW</b></div><div>크기(W×D×H)<b>1,200×1,170×1,480mm</b></div><div>필름 규격<b>100Mic × 450mm × 300M</b></div></div></div></a><a class="pc" href="https://mpmkorea.imweb.me/44"><div class="ph"><img src="assets/p_bsm100.jpg" alt="BSM-100/OS" loading="lazy"></div><div class="meta"><div class="cat">보드용 스킨 포장기 · 1구</div><h5>BSM-100/OS</h5><div class="spec"><div>포장 속도<b>3~4팩/분</b></div><div>전원<b>단상 220V · 2kW</b></div><div>크기(W×D×H)<b>460×550×1,570mm</b></div><div>필름 규격<b>100Mic × 250mm × 300M</b></div></div></div></a><a class="pc" href="https://mpmkorea.imweb.me/45"><div class="ph"><img src="assets/p_bsm300.jpg" alt="BSM-300/OS" loading="lazy"></div><div class="meta"><div class="cat">보드용 스킨 포장기 · 2구</div><h5>BSM-300/OS</h5><div class="spec"><div>포장 속도<b>6~8팩/분</b></div><div>전원<b>삼상 380V+N · 3kW</b></div><div>크기(W×D×H)<b>1,030×920×1,535mm</b></div><div>필름 규격<b>100Mic × 350mm × 300M</b></div></div></div></a></div>
+    <div class="pgrid wide" data-p="cont" style="display:none"><a class="pc" href="https://mpmkorea.imweb.me/46"><div class="ph"><img src="assets/p_skm.webp" alt="SKM-03VST" loading="lazy"></div><div class="meta"><div class="cat">자동 연속식 스킨 포장기 · 3구</div><h5>SKM-03VST</h5><div class="spec"><div>포장 속도<b>15~21팩/분</b></div><div>전원<b>삼상 380V+N · 6kW</b></div><div>크기(W×D×H)<b>1,620×940×1,440mm</b></div><div>필름 규격<b>100Mic × 600mm × 300M</b></div></div></div></a><a class="pc" href="https://mpmkorea.imweb.me/47"><div class="ph"><img src="assets/p_skm14.jpg" alt="SKM-14VST" loading="lazy"></div><div class="meta"><div class="cat">자동 연속식 스킨 포장기 · 4구</div><h5>SKM-14VST</h5><div class="spec"><div>포장 속도<b>32~36팩/분</b></div><div>전원<b>삼상 380V+N · 7.5kW</b></div><div>크기(W×D×H)<b>3,800×944×1,730mm</b></div><div>필름 규격<b>100Mic × 320mm × 300M</b></div></div></div></a></div>
+    <div class="pgrid wide" data-p="map" style="display:none"><a class="pc" href="https://mpmkorea.imweb.me/48"><div class="ph"><img src="assets/p_tsm01.jpg" alt="TSM-01GPM" loading="lazy"></div><div class="meta"><div class="cat">반자동 산소(MAP) 포장기 · 1구</div><h5>TSM-01GPM</h5><div class="spec"><div>포장 속도<b>6~7팩/분</b></div><div>전원<b>단상 220V · 2kW</b></div><div>크기(W×D×H)<b>460×550×1,570mm</b></div><div>필름 규격<b>25Mic × 260mm × 1,000M</b></div></div></div></a><a class="pc" href="https://mpmkorea.imweb.me/49"><div class="ph"><img src="assets/p_tsm02.jpg" alt="TSM-02GPM" loading="lazy"></div><div class="meta"><div class="cat">반자동 산소(MAP) 포장기 · 2구</div><h5>TSM-02GPM</h5><div class="spec"><div>포장 속도<b>12~14팩/분</b></div><div>전원<b>단상 220V · 3kW</b></div><div>크기(W×D×H)<b>1,020×920×1,400mm</b></div><div>필름 규격<b>25Mic × 300mm × 1,600M</b></div></div></div></a></div>
+    <div class="pane" data-p="mat">
+      <div class="card"><img src="assets/skin_trays.jpg" alt=""><div class="t"><h5>스킨 전용 용기·필름</h5><p>용기 뒷면 숫자가 모델명이며, 사이즈는 가로×세로×높이(cm)입니다.</p><ul><li>1319 · 1622 · 1724 시리즈, D2·D3 대형 용기</li><li>장비 모델별 전용 필름 규격 공급</li><li>EVOH 함유 필름으로 산소 차단·투명성 확보</li></ul></div></div>
+      <div class="card"><img src="assets/film_rolls.jpg" alt=""><div class="t"><h5>MAP 용기·필름</h5><p>MB/MC · GB/TC · FC · TC 시리즈. 블랙(B)·투명(C) 선택.</p><ul><li>산소 차단성과 방담성이 우수한 고투명 수축 필름</li><li>PP/PE 저온 실링, PP 단일 재질 친환경 제품</li><li>TSM-01GPM / 02GPM 전용 규격</li></ul></div></div>
+      <div class="card"><img src="assets/map_tray_meat.jpg" alt=""><div class="t"><h5>장비와 자재를 한 번에</h5><p>장비 사양에 맞는 용기와 필름을 본사가 함께 공급하니 호환을 따로 확인할 필요가 없습니다.</p><ul><li>규격·형태·컬러 옵션</li><li>브랜드 인쇄 및 라벨 부착 상담</li></ul></div></div>
+    </div>
+    <div class="pane" data-p="gift">
+      <div class="card"><img src="assets/sleeve_01.jpg" alt=""><div class="t"><h5>MPM 슬리브</h5><p>기존 용기에 슬리브만 씌워 프리미엄 선물세트로. 금박 블랙·한지 명품 등 13종.</p><ul><li>기본 400장, 하프 800장 단위</li><li>특수 코팅, 금박/은박, 유광/무광</li></ul></div></div>
+      <div class="card"><img src="assets/gift_8p.jpg" alt="" style="object-position:center"><div class="t"><h5>VVIP 지함박스</h5><p>4P · 8P · 와이드 구성, 부직포·폴리 보냉가방까지.</p><ul><li>1622 / 1724 용기 겸용</li><li>기성 디자인 외 별도 제작 상담</li></ul></div></div>
+      <div class="card"><img src="assets/sticker_strip.jpg" alt="" style="object-fit:contain;background:#E9EDF3"><div class="t"><h5>띠지 스티커 · 전용 스티로폼</h5><p>부위별 띠지형 스티커와 택배용 슬리브형 스티로폼(2~6구).</p><ul><li>하단 공간 활용으로 택배 부피 절감</li><li>브랜딩 요소를 쉽게 추가</li></ul></div></div>
+    </div>
+    <p class="note rv">* 사양은 MPM 제품 브로슈어 기준이며, 옵션과 현장 조건에 따라 달라질 수 있습니다.</p>
+  </div>
+</section>
+
+<section class="msg">
+  <div class="wrap">
+    <div class="rv" style="position:relative;height:560px;overflow:hidden"><img src="assets/ceo_kr.jpg" alt="" style="width:100%;height:100%;object-fit:cover;object-position:50% 30%"></div>
+    <div class="rv">
+      <div class="tag" style="font-size:14px;font-weight:800;letter-spacing:.2em;color:#ff6b70">CEO MESSAGE</div>
+      <q style="margin-top:20px">“내일의 신선함, 오늘의 선택”<br>책임 있는 기술로 답하겠습니다.</q>
+      <p class="txt">㈜엠피엠코리아는 합리적인 가격과 우수한 품질의 포장 솔루션으로 고객의 가치 있는 선택을 지원합니다. 현장의 요구를 깊이 분석하고, 이를 반영한 포장기계를 본사에서 지속적으로 연구·개발하고 있습니다.</p>
+      <div class="sign">㈜엠피엠코리아 대표이사 <b>홍승인</b></div>
+      <div class="vision"><div><b>VISION 01</b><h6>첨단 기술로 앞서가는 성장</h6></div><div><b>VISION 02</b><h6>고객 맞춤 가치 실현</h6></div><div><b>VISION 03</b><h6>친환경과 책임 경영</h6></div></div>
+    </div>
+  </div>
+</section>
+
+<section class="hist" id="history">
+  <div class="wrap">
+    <div class="sh rv"><div><div class="tag">HISTORY</div><h2>2018년 수동 1구 한 대에서<br>12개 모델 라인업까지</h2></div><p>매년 직접 개발하고, 세대를 거듭해 개선해 왔습니다. 본사가 설계하기 때문에 가능한 속도입니다.</p></div>
+    <div class="mile rv"><div><b>2018</b><span>첫 모델 출시 · 수동 1구</span></div><div><b>3세대</b><span>수동·반자동 스킨 포장기</span></div><div><b>특허·상표</b><span>스킨 포장기 특허 · MPM 상표 출원</span></div><div><b>2024·2025</b><span>미트엑스포 라인업 공개</span></div></div>
+    <div class="hcols rv"><div class="hcol"><div class="hit"><div class="y">2025</div><ul><li>반자동 1·2구 스킨 포장기 3세대 모델 출시</li><li>D3 전용, 보드 전용, 연속식 4구 스킨 포장기 1세대 모델 출시</li><li class="k">MPM 상표 등록 출원</li><li class="k">2025 미트엑스포 참가 (MPM-KOREA 포장기 라인업 공개)</li></ul></div><div class="hit"><div class="y">2024</div><ul><li>반자동 1·2구 MAP(산소) 포장기 1세대 모델 출시</li><li>연속식 3구 스킨 포장기 1세대 모델 출시</li><li class="k">2024 미트엑스포 참가 (MPM-KOREA 포장기 라인업 공개)</li><li>D3 전용 반자동 스킨 포장기 개발</li><li>반자동 1·2구 스킨 포장기 업그레이드</li></ul></div><div class="hit"><div class="y">2023</div><ul><li>반자동 1·2·4구 스킨 포장기 2세대 모델 출시</li><li class="k">MPM 상표 등록 출원</li><li class="k">스킨 포장기 특허 등록 출원</li><li>반자동 1·2구 MAP(산소) 포장기 개발</li><li>수동 1·2구 스킨 포장기 3세대 모델 출시</li></ul></div><div class="hit"><div class="y">2022</div><ul><li>보드 전용, 연속식 3구 스킨 포장기 개발</li><li>수동 1·2구 스킨 포장기 2세대 모델 출시</li></ul></div></div><div class="hcol"><div class="hit"><div class="y">2021</div><ul><li>반자동 1·2·4구 스킨 포장기 1세대 모델 출시</li></ul></div><div class="hit"><div class="y">2020</div><ul><li>반자동 1·2·4구 스킨 포장기 개발</li><li>수동 1·2구 스킨 포장기 업그레이드 버전 출시</li></ul></div><div class="hit"><div class="y">2019</div><ul><li>수동 2구 스킨 포장기 1세대 모델 출시</li></ul></div><div class="hit"><div class="y">2018</div><ul><li>수동 1구 스킨 포장기 1세대 모델 출시</li></ul></div></div></div>
+  </div>
+</section>
+
+<section class="loc" id="hq">
+  <div class="wrap">
+    <div class="info rv">
+      <div class="sh" style="margin-bottom:0;display:block"><div class="tag">HEADQUARTERS</div><h2>MPM 본사</h2><p style="margin-top:16px">장비 시연과 상담은 천안 본사에서 직접 진행합니다. 방문 전 연락 주시면 담당 엔지니어가 준비해 두겠습니다.</p></div>
+      <dl>
+        <div><dt>주소</dt><dd>충남 천안시 동남구 풍세면 태학산로 138, 1층</dd></div>
+        <div><dt>대표전화</dt><dd>1522-0072 / 041-554-9045</dd></div>
+        <div><dt>팩스</dt><dd>041-574-0072</dd></div>
+        <div><dt>이메일</dt><dd>sales@mpmkorea.com</dd></div>
+        <div><dt>운영시간</dt><dd>평일 09:00 ~ 17:00 (주말·공휴일 휴무)</dd></div>
+      </dl>
+    </div>
+    <div class="map rv"><iframe src="https://maps.google.com/maps?q=%EC%B6%A9%EB%82%A8%20%EC%B2%9C%EC%95%88%EC%8B%9C%20%EB%8F%99%EB%82%A8%EA%B5%AC%20%ED%92%8D%EC%84%B8%EB%A9%B4%20%ED%83%9C%ED%95%99%EC%82%B0%EB%A1%9C%20138&z=15&output=embed" loading="lazy"></iframe></div>
+  </div>
+</section>
+
+<div class="cta-band" id="contact">
+  <div class="wrap">
+    <h3>도입을 검토 중이신가요?<br>본사 엔지니어가 직접 상담합니다.</h3>
+    <div style="display:flex;align-items:center;gap:40px;flex-wrap:wrap"><div class="ph">본사 대표번호<b>1522-0072</b></div><a class="b1" href="https://mpmkorea.imweb.me/contact">견적 / 시연 문의 →</a></div>
+  </div>
+</div>
+
+<footer>
+  <div class="wrap">
+    <div><img src="https://cdn.imweb.me/thumbnail/20261022/5d1f7d856ef43.png" alt="MPM"><div><b>㈜엠피엠코리아</b> · 대표자 홍승인 · 사업자등록번호 571-81-00549</div><div>충남 천안시 동남구 풍세면 태학산로 138, 1층</div><div>TEL 041-554-9045 · FAX 041-574-0072 · sales@mpmkorea.com</div></div>
+    <div style="text-align:right"><div>개인정보처리방침 · 이용약관</div><div style="margin-top:8px">© MPM KOREA. All Rights Reserved.</div></div>
+  </div>
+</footer>
+
+<script>
+const hd=document.getElementById('hd');addEventListener('scroll',()=>hd.classList.toggle('on',scrollY>40));
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');e.target.querySelectorAll('[data-n]').forEach(n=>{const t=+n.dataset.n;if(t<2000){let c=0;const s=Math.max(1,Math.ceil(t/60));const f=()=>{c=Math.min(t,c+s);n.textContent=c.toLocaleString();if(c<t)requestAnimationFrame(f)};f()}});io.unobserve(e.target)}}),{threshold:.15});
+document.querySelectorAll('.rv').forEach(el=>io.observe(el));
+document.querySelectorAll('.tabs button').forEach(b=>b.onclick=()=>{document.querySelectorAll('.tabs button').forEach(x=>x.classList.toggle('on',x===b));document.querySelectorAll('[data-p]').forEach(p=>p.style.display=p.dataset.p===b.dataset.t?(p.classList.contains('mat')?'grid':'grid'):'none')});
+</script>
+</body>
+</html>
