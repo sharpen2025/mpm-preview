@@ -161,6 +161,23 @@ footer b{color:#c4cfde;font-weight:600}
 .pc2.cta em{margin-top:22px;font-style:normal;font-weight:700;display:inline-flex;gap:8px;align-items:center;border:1px solid rgba(255,255,255,.4);padding:12px 18px;width:fit-content}
 .pc2.cta:hover em{background:#fff;color:var(--navy)}
 @media(max-width:1024px){.s2 .in{padding:0 20px}.bar2{flex-direction:column;align-items:flex-start;gap:8px}.tabs2{overflow-x:auto;max-width:100%}.stage{flex:none;height:440px}.pc2{flex-basis:78%}}
+
+/* ===== v4: 두 번째 영역 높이 축소 (100vh 해제, 고정 높이) ===== */
+.s2{height:auto;min-height:0;padding:100px 0 48px}
+.s2 .in{height:auto;gap:16px}
+.s2 h2{font-size:clamp(24px,2.2vw,32px)}
+.stage{flex:none;height:auto}
+.stage .track{position:static;height:auto}
+.pc2 .im{flex:none;height:190px;padding:14px}
+.pc2 .mt{padding:14px 20px 14px}
+.pc2 .sp{margin-top:6px;padding-top:4px}
+.pc2 .sp div{padding:2px 0}
+.pc2.cta{padding:28px}
+.pc2.cta h3{font-size:21px}
+.lower{height:140px;margin-top:4px}
+.bn{padding:18px 22px}.bn b{font-size:20px}.bn span{font-size:13px}
+.sup{padding:16px 22px}.sup .tel{font-size:30px}
+@media(max-width:1024px){.pc2 .im{height:200px}.lower{height:auto}}
 </style>
 </head>
 <body>
