@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ko"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="robots" content="noindex,nofollow">
+<title>MPM KOREA 사업분야 서브페이지 시안 3종</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}html,body{height:100%;overflow:hidden}
+body{font-family:"Pretendard Variable",sans-serif;background:#E7EAEF;color:#111;display:flex;flex-direction:column}
+.bar{flex:none;height:72px;background:#fff;border-bottom:1px solid #dde1e7;display:flex;align-items:center;gap:20px;padding:0 20px;z-index:2}
+.bar h1{font-size:15px;font-weight:800;white-space:nowrap}.bar h1 small{display:block;font-size:11.5px;font-weight:500;color:#7a8291}
+.sw{display:flex;gap:8px;margin:0 auto}
+.sw button{all:unset;cursor:pointer;display:flex;align-items:center;gap:10px;padding:9px 16px;border:1px solid #dde1e7;border-radius:12px;background:#fff;transition:.2s}
+.sw button i{width:22px;height:22px;border-radius:6px;flex:none}
+.sw button b{display:block;font-size:14px}.sw button span{display:block;font-size:11.5px;color:#7a8291;margin-top:1px}
+.sw button:hover{border-color:#9aa3b2}.sw button.on{border-color:#111;box-shadow:0 0 0 1px #111;background:#f7f8fa}
+.tools{display:flex;align-items:center;gap:8px}
+.seg{display:flex;background:#eef0f3;border-radius:10px;padding:3px}
+.seg button{all:unset;cursor:pointer;font-size:13px;font-weight:700;padding:7px 12px;border-radius:8px;color:#6b7383}.seg button.on{background:#fff;color:#111;box-shadow:0 1px 3px rgba(0,0,0,.12)}
+.nw{font-size:13px;font-weight:700;color:#111;text-decoration:none;border:1px solid #dde1e7;border-radius:10px;padding:8px 12px;white-space:nowrap}
+.stage{flex:1;min-height:0;position:relative;overflow:hidden}
+.frame{position:absolute;top:0;left:50%;transform-origin:top center;background:#fff;box-shadow:0 10px 40px rgba(0,0,0,.12)}
+.frame iframe{width:100%;height:100%;border:0;display:block}
+.stage.m .frame{top:20px;border-radius:28px;overflow:hidden;border:10px solid #111}
+@media(max-width:900px){.bar{height:auto;flex-wrap:wrap;padding:10px;gap:8px}.sw{order:3;width:100%;margin:0;overflow-x:auto}.sw button span{display:none}.bar h1{margin-right:auto}}
+</style></head><body>
+<div class="bar">
+ <h1>MPM KOREA 홈페이지 시안<small>사업분야 서브페이지 · 시안 3종</small></h1>
+ <div class="sw">
+  <button data-k="1" data-src="biz1.html?v=1"><i style="background:linear-gradient(135deg,#0A1B33 60%,#D7262E 60%)"></i><div><b>시안 1</b><span>Classic · 이미지 타이틀+지그재그</span></div></button>
+  <button data-k="2" data-src="biz2.html?v=1"><i style="background:linear-gradient(90deg,#0A1B33 30%,#f5f7fa 30%);border:1px solid #dde1e7"></i><div><b>시안 2</b><span>Document · 좌측 메뉴+정보형</span></div></button>
+  <button data-k="3" data-src="biz3.html?v=1"><i style="background:linear-gradient(135deg,#fff 50%,#D7262E 50%);border:1px solid #dde1e7"></i><div><b>시안 3</b><span>Overview · 큰 타이포+분야 카드</span></div></button>
+ </div>
+ <div class="tools"><div class="seg"><button data-v="pc" class="on">PC</button><button data-v="m">모바일</button></div><a class="nw" id="nw" target="_blank" href="biz1.html">새 창으로 ↗</a></div>
+</div>
+<div class="stage" id="st"><div class="frame" id="fr"><iframe id="ifr" title="시안 미리보기"></iframe></div></div>
+<script>
+const st=document.getElementById('st'),fr=document.getElementById('fr'),ifr=document.getElementById('ifr'),nw=document.getElementById('nw');
+let view='pc',cur=null;
+function fit(){const W=st.clientWidth,H=st.clientHeight;
+ if(view==='pc'){const base=1440,s=Math.min(1,W/base);fr.style.width=base+'px';fr.style.height=(H/s)+'px';fr.style.transform='translateX(-50%) scale('+s+')';}
+ else{const w=390,h=Math.min(844,H-40);fr.style.width=w+'px';fr.style.height=h+'px';fr.style.transform='translateX(-50%)';}}
+function show(k){const b=document.querySelector('.sw button[data-k="'+k+'"]')||document.querySelector('.sw button');k=b.dataset.k;
+ document.querySelectorAll('.sw button').forEach(x=>x.classList.toggle('on',x===b));
+ if(cur!==k){ifr.src=b.dataset.src;nw.href=b.dataset.src;cur=k}history.replaceState(null,'','#'+k);}
+document.querySelectorAll('.sw button').forEach(b=>b.onclick=()=>show(b.dataset.k));
+document.querySelectorAll('.seg button').forEach(b=>b.onclick=()=>{view=b.dataset.v;document.querySelectorAll('.seg button').forEach(x=>x.classList.toggle('on',x===b));st.classList.toggle('m',view==='m');fit()});
+addEventListener('resize',fit);addEventListener('hashchange',()=>show(location.hash.slice(1)));
+fit();show(location.hash.slice(1)||'1');
+</script></body></html>
