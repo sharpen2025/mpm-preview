@@ -183,6 +183,25 @@ footer b{color:#c4cfde;font-weight:600}
 .lw{padding:0 56px;margin-top:20px}
 .lw .lower{margin-top:0}
 @media(max-width:1024px){.lw{padding:0 20px}}
+
+/* ===== v6: 카테고리 네모 버튼 + 고객지원 가로 박스 ===== */
+.bar2{border-bottom:0;align-items:center}
+.tabs2{gap:8px}
+.tabs2 button{border:1px solid #cfd6e2;border-bottom:1px solid #cfd6e2;margin-bottom:0;padding:13px 22px;background:#fff;color:#5b6577;transition:.2s}
+.tabs2 button:hover{border-color:var(--navy);color:var(--navy)}
+.tabs2 button.on{background:var(--navy);border-color:var(--navy);color:#fff}
+.tabs2 button.on span{color:#9fb0c8}
+.bar2 .ctrl{padding-bottom:0}
+.lower{grid-template-columns:repeat(3,1fr);grid-template-rows:156px 156px;height:auto;gap:16px}
+.sup{grid-column:1/-1;display:grid;grid-template-columns:auto 1fr auto;align-items:center;gap:56px;padding:0 44px}
+.sup .h{flex-direction:column;align-items:flex-start;gap:10px}
+.sup .h small{font-size:13px}
+.sup .h em{font-size:14px}
+.sup .tel{font-size:40px;margin-top:0;padding-left:56px;border-left:1px solid rgba(255,255,255,.18)}
+.sup .tel span{font-size:14px;margin:8px 0 0}
+.sup .lk{grid-template-columns:repeat(4,auto);gap:8px}
+.sup .lk a{font-size:14.5px;padding:16px 24px}
+@media(max-width:1024px){.lower{grid-template-columns:1fr;grid-template-rows:none}.sup{grid-template-columns:1fr;gap:16px;padding:24px}.sup .tel{padding-left:0;border-left:0}.sup .lk{grid-template-columns:repeat(2,1fr)}}
 </style>
 </head>
 <body>
